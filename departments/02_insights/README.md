@@ -7,6 +7,7 @@
 
 ## データ取得方法（優先順）
 1. vidIQ の Instagram 連携（`vidiq_instagram_owner_insights`）— 要: プロアカウント（ビジネス/クリエイター）化と vidIQ 連携
+   - **注意（2026-10-20）**: owner_insights は新しい順に12本ずつしか返さない。ピン留め動画や古い投稿（再生上位の多くは9月投稿）を落とさないよう、`recentMediaCursor` で最後（`recentMediaNextCursor` が null）までページ送りして全投稿を取る。同じタイトルの再投稿があるので、タイトルはキャプションと冒頭テロップ（サムネイル）で確認し、投稿日で区別する。
 2. 公開データ（`vidiq_ig_profile` / `vidiq_ig_profile_reels`）— 再生数・いいね・コメント等の公開値のみ
 3. 手入力シート — メンバーが Instagram アプリのインサイト画面から転記
 

@@ -13,6 +13,7 @@ description: 部門2「自身のInstagram分析部門」。@riko_jitu のイン�
 
 ## データ取得
 1. vidIQ: `vidiq_instagram_connected_accounts` → `vidiq_instagram_owner_insights`（連携されていれば）、`vidiq_ig_profile` / `vidiq_ig_profile_reels`（公開値）
+   - **注意（2026-10-20）**: owner_insights は新しい順に12本ずつしか返さない。ピン留め動画や古い投稿（再生上位の多くは9月投稿）を落とさないよう、`recentMediaCursor` で最後（`recentMediaNextCursor` が null）までページ送りして全投稿を取る。同じタイトルの再投稿があるので、タイトルはキャプションと冒頭テロップ（サムネイル）で確認し、投稿日で区別する。
 2. メンバーの手入力（「3 分析 → 投稿の数字」）、ちゃむの Windsor.ai 分析結果
 3. 取れない項目は空欄のまま。推測で埋めない。
 

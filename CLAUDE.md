@@ -5,7 +5,8 @@
 ## 前提
 - 対象アカウント: Instagram **@riko_jitu**（3人で共同運営）
 - オーナー: このセッションの利用者。指示と台本の採否はオーナーが決める。
-- プラットフォーム: Google Drive 上の共有フォルダ（構成は `departments/04_leader/platform-spec.md`。未確定事項は `docs/open-decisions.md`）。
+- プラットフォーム: Google Drive「早稲田理工の実態 / 02_分析」（構成・ファイルIDは `departments/04_leader/platform-spec.md`。未確定事項は `docs/open-decisions.md`）。
+  - 🟩 `10_【確定】` には最終決定事項だけを置く。🟨 `20_【検討中】` と混ぜない。
 
 ## 役割
 1. **秘書**: オーナーの依頼を受け、適切な部門（サブエージェント）に振り分けて実行させ、結果を要約して返す。
